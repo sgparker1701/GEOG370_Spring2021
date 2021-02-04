@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCP Points</title>
+</head>
+<body>
+    <h1>In this project I learned how to display images in different projections</h1>
+    
+    <!-- <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2> -->
+    <p>     Building on the lessons from Section I, in which we created maps and downloaded them as images, I used various Coordinate Reference System projections along with the Indicatrix plug-in to show the distortions of each projection. Initially I downloaded the data from the class website in organized folders. Then I made sure the Indicatrix plug-in was active in QGIS. After changing the colors in the map, I created a print layout for each projection and downloaded them as images (.png files). These images are displayed on this webpage which was coded in Visual Code Studio and transformed into a website through GitHub. I created the repository by accessing GitHub on the internet, and updated the webpage through the GitHub desktop application. This page is a "master branch" that I can commit code to in my "GEOG370_Spring2021" Repository and push to the origin, which allows anyone to view the webpage.</p>
+    
+    <h2>WGS84 Projection</h2>
+    <h3>This projection preserves shapes and angles, while noticeably distorting area. This makes it best-used for small areas. This projection is standard for GPS, since accurate angles and directon are important for navigational purposes.</h3>
+    <a href="./maps/WGS84.1.png">
+    <img src="./maps/WGS84.1.png" alt="WGS84" width='500px'>
+    </a>
+    <h2>Pseudo-Mercator</h2>
+    <h3>This map projects the WGS84 coordinate system onto a square. It is useful for visualization on computers, but not suited for storing data.</h3>
+    <a href="./maps/Pseudo Mercator HW2.png">
+    <img src="./maps/Pseudo Mercator HW2.png" alt="WGS84 EPSG 3857" width='500px'>
+    </a>
+    <h2>Aitoff Projection</h2>
+    <h3>This projection is best for small-scale maps, since shape, area, distance, and direction are all somewhat distorted. This projection is scaled accurately only along the Prime Meridian and the Equator.</h3>
+    <a href="./maps/Aitoff.png">
+    <img src="./maps/Aitoff.png" alt="Aitoff" width='500px'>
+    </a>
+    <h2>Sphere Winkel I</h2>
+    <h3>This is a compromise projection. Area, direction, and shape are each somewhat distorted. It is suited only for coordinates that reference a sphere. It could be suited for general purposes, when none of these exact details are necessary.</h3>
+    <a href="./maps/SphereWinkelI.png">
+    <img src="./maps/SphereWinkelI.png" alt="Sphere Winkel I" width='500px'>
+    </a>
+    <h2>World Cylindrical Equal Area</h2>
+    <h3>This projection preserves area while distorting shape and angles. For example, although the size of Greenland is now accurately 1/14 the size of Africa, it is vertically compressed and horizonatally stretched to fit onto a continuous 2D surface. A map that preserves area could be useful in measurements of deforestations, which use units of area.</h3>
+    <a href="./maps/WorldCylindricalEqualArea.png">
+    <img src="./maps/WorldCylindricalEqualArea.png" alt="World Cylindrical Equal Area" width='500px'>
+    </a>
+    <h2>World Equidistant Conic</h2>
+    <h3>This projection preserves distance along meridians, while distorting area, directions, and angles. This map would be best for land that is east-west oriented and is at mid-latitudes.</h3>
+    <a href="./maps/World Equidistant ConicHW2.png">
+    <img src="./maps/World Equidistant ConicHW2.png" alt="World Equidistant Conic" width='500px'>
+    </a>
+    <h2>North Pole Azimuthal Equidistant</h2>
+    <h3>This projection preserves distance and direction, while distorting area and angles. Since distance is preserved, this projection may be useful for showing the relative length of different flights. However, distance is only preserved to and from the center of the map. Distances from any two points outside of the center are distorted.</h3>
+    <a href="./maps/North Pole Azimuthal Equidistant.png">
+    <img src="./maps/North Pole Azimuthal Equidistant.png" alt="North Pole Azimuthal Equidistant" width='500px'>
+    </a>
+    <h2>The World From Space</h2>
+    <h3>This orthographic map is used by Google Earth. It almost appears as though it is a picture of the Earth from space.</h3>
+    <a href="./maps/TheWorldFromSpace.png">
+    <img src="./maps/TheWorldFromSpace.png" alt="The World From Space" width='500px'>
+    </a>
+    <h2>World Robinson</h2>
+    <h3>This is a compromise projection. Area, distance, and direction are all distorted. However, each distortion is very limited over most of the map. Distortion occurs most around the poles and edges. It is considers visually-appealing by many. It is suited for general purposes, like perhaps teaching some historical events, when exact details are not necessary.</h3>
+    <a href="./maps/RobinsonHW2.png">
+    <img src="./maps/RobinsonHW2.png" alt="World Robinson" width='500px'>
+    </a>
+    <!-- <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2> -->
+    <!-- <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3> -->
+    <!-- <p></p> -->
+    <!-- <h2>Data used for this project</h2> -->
+    <!-- <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a> -->
+</body>
+</html>
