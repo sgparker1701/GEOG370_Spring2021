@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projections</title>
+</head>
+<body>
+    <h1>The following are my GCP points for a 1964 georeferenced image of downtown Beeaufort.</h1>
+    <h1>They are in the following format: source x, source y, dest. x, dest. y, dX (pixels), dY (pixels), residual (pixels)</h1>
+
+    
+    <!-- <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2> -->
+    <!-- <p>Point 1: 4053.57, 2808.97, 2.70063e+06, 362142, -3.62384, 1.95564, 4.11786</p> -->
+    <!-- <p>Point 2: 4906.63, 3326.05, 2.70419e+06, 364497, -1.93696, -1.38544, 2.38144</p> -->
+    <!-- <p>Point 3: 4295.25, 3277.97, 2.7016e+06, 364197, 2.05407, -3.38876, 3.96269</p> -->
+    <!-- <p>Point 4: 4926.93, 2905.15, 2.70437e+06, 362688, 1.56471, 5.02785, 5,2657</p> -->
+    <!-- <p>Point 5: 4944.73, 2415.54. 2.70454e+06, 360647, -0.65135, -2.89311, 2.96552</p> -->
+    <!-- <p>Point 6: 3927.74, 2528.89, 2.70017e+06, 360937, 1.47135, .834442, 1.6915</p> -->
+    <!-- <p>Point 7: 4392.36, 2489.55, 2.70216e+06, 360866, -.103933, -2.98749, 2.9893</p> -->
+    <!-- <p>Point 8:4512.42, 2820,21, 2.70261e+06, 362265, 1.22595, 2.83687, 3.09043</p> -->
+    
+    <!-- <h2>WGS84 Projection</h2> -->
+    <!-- <h3>This projection preserves shapes and angles, while noticeably distorting area. This makes it best-used for small areas. This projection is standard for GPS, since accurate angles and directon are important for navigational purposes.</h3> -->
+    <!-- <a href="./maps/WGS84.1.png"> -->
+    <!-- <img src="./maps/WGS84.1.png" alt="WGS84" width='500px'> -->
+    <!-- </a> -->
+    <!-- <h2>Pseudo-Mercator</h2> -->
+    <!-- <h3>This map projects the WGS84 coordinate system onto a square. It is useful for visualization on computers, but not suited for storing data.</h3> -->
+    <!-- <a href="./maps/Pseudo Mercator HW2.png"> -->
+    <!-- <img src="./maps/Pseudo Mercator HW2.png" alt="WGS84 EPSG 3857" width='500px'> -->
+    <!-- </a> -->
+    <!-- <h2>Aitoff Projection</h2> -->
+    <!-- <h3></h3> -->
+    <a href="./georefbeaufort.png">
+    <img src="./georefbeaufort.png" alt="Historical Beaufort Map" width='500px'>
+    </a>
+    <!-- <h2>Sphere Winkel I</h2> -->
+    <!-- <h3>This is a compromise projection. Area, direction, and shape are each somewhat distorted. It is suited only for coordinates that reference a sphere. It could be suited for general purposes, when none of these exact details are necessary.</h3> -->
+    <!-- <a href="./maps/SphereWinkelI.png"> -->
+    <!-- <img src="./maps/SphereWinkelI.png" alt="Sphere Winkel I" width='500px'> -->
+    <!-- </a> -->
+    <!-- <h2>World Cylindrical Equal Area</h2> -->
+    <!-- <h3>This projection preserves area while distorting shape and angles. For example, although the size of Greenland is now accurately 1/14 the size of Africa, it is vertically compressed and horizonatally stretched to fit onto a continuous 2D surface. A map that preserves area could be useful in measurements of deforestations, which use units of area.</h3> -->
+    <!-- <a href="./maps/WorldCylindricalEqualArea.png"> -->
+    <!-- <img src="./maps/WorldCylindricalEqualArea.png" alt="World Cylindrical Equal Area" width='500px'> -->
+    <!-- </a> -->
+    <!-- <h2>World Equidistant Conic</h2> -->
+    <!-- <h3>This projection preserves distance along meridians, while distorting area, directions, and angles. This map would be best for land that is east-west oriented and is at mid-latitudes.</h3> -->
+    <!-- <a href="./maps/World Equidistant ConicHW2.png"> -->
+    <!-- <img src="./maps/World Equidistant ConicHW2.png" alt="World Equidistant Conic" width='500px'> -->
+    <!-- </a> -->
+    <!-- <h2>North Pole Azimuthal Equidistant</h2> -->
+    <!-- <h3>This projection preserves distance and direction, while distorting area and angles. Since distance is preserved, this projection may be useful for showing the relative length of different flights. However, distance is only preserved to and from the center of the map. Distances from any two points outside of the center are distorted.</h3> -->
+    <!-- <a href="./maps/North Pole Azimuthal Equidistant.png"> -->
+    <!-- <img src="./maps/North Pole Azimuthal Equidistant.png" alt="North Pole Azimuthal Equidistant" width='500px'> -->
+    <!-- </a> -->
+    <!-- <h2>The World From Space</h2> -->
+    <!-- <h3>This orthographic map is used by Google Earth. It almost appears as though it is a picture of the Earth from space.</h3> -->
+    <!-- <a href="./maps/TheWorldFromSpace.png"> -->
+    <!-- <img src="./maps/TheWorldFromSpace.png" alt="The World From Space" width='500px'> -->
+    <!-- </a> -->
+    <!-- <h2>World Robinson</h2> -->
+    <!-- <h3>This is a compromise projection. Area, distance, and direction are all distorted. However, each distortion is very limited over most of the map. Distortion occurs most around the poles and edges. It is considers visually-appealing by many. It is suited for general purposes, like perhaps teaching some historical events, when exact details are not necessary.</h3> -->
+    <!-- <a href="./maps/RobinsonHW2.png"> -->
+    <!-- <img src="./maps/RobinsonHW2.png" alt="World Robinson" width='500px'> -->
+    </a>
+    <!-- <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2> -->
+    <!-- <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3> -->
+    <!-- <p></p> -->
+    <!-- <h2>Data used for this project</h2> -->
+    <!-- <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a> -->
+</body>
+</html>
