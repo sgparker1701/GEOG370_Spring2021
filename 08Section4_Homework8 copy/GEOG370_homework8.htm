@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Homework 9: Census Data Proportional Chloropleths with Various Classification Methods</h1>
+    <h2>Grace Parker</h2>
+    <h3>Below, the same dataset is shown with three different classification methods: equal interval, quantile, and natural breaks. The ratio presented in these maps is the median income of women in NY by county as a percent of the median income of men in NY by county. This ratio is best described as an association between two related attributes. This normalization follows best practices, since both attributes come from the same universe: the income of full time, year long workers age 16 or older in each county. By pulling from the same universe and by pulling data of the same type (median income), I have avoided comparing apple to oranges and ensured a meaningful map.</h3>
+
+    <!-- a png image of your map will be embedded using the lines below  -->
+    <h3>Equal Interval</h3>
+    <h4>The following map uses the equal interval classification method. Each interval has a range of 10.0 percentage points. Although a main advantage of this method is that it is easy for non-technical readers to understand, the default interval ranges do not always make this the case. For example, the default interval range for this data set was 8.2 percentage points. This was not easy to read, and many viewers might not even notice that the ranges are each equal since the range was not an integer or simple fraction. To avoid this problem, I changed the interval range to 10.0 percentage points by hand to highlight the advantages of this method.</h4>
+    <h4>A disadvantage of this method is that most of the values can often fall into just one or two of the categories. Indeed, in this map most values are in the lower two categories (yellow and light green). Further, there is an entire category that does not appear in the legend because no values fell in the 99.9 to 109.9 range. This method may be hiding significant differences or creating its own arbitrary differences in order to make the intervals easier to read. For this reason, this method is best for datasets that vary continuously.</h4>
+    <a href="./actualequalinterval.png"> 
+        <img src="./actualequalinterval.png" alt="Equal Interval Map" width='500px'>
+        </a>
+    <h3>Quantile</h3>
+    <h4>The following map uses the quantile classification method. It classifies the dataset so that the same number of counties will fall into each interval. For this set, 12-13 counties are in each interval. For this reason, the legend is a bit more difficult to read; the range begins and ends based on the data, not based on what is intuitive for the viewer. Like the equal interval method, this method can hide significant differences or create arbitrary differences. For this reason, this method is best for datasets that are equally distributed across their own range. </h4>
+    <a href="./quantile.png"> 
+            <img src="./quantile.png" alt="Quantile Map" width='500px'>
+            </a>
+    <h3>Natural Breaks (Adjusted)</h3>
+    <h4>The following map uses the natural breaks classification method, although I adjusted the numbers slightly to improve the legibility of the legend. This method is best for datasets that are unevenly distributed, but not skewed towards one end. This method is useful, since it shows meaningful differences. However, it can use wildly different interval ranges. In this map, one range is just 5 percentage points, while another is 17 points. Since this dataset is skewed, many more counties arenin the lower two intervals than in the higher intervals. Almost half of the counties on this map (30) are in the lightest green category, whereas only one county is in the darkest green interval. In addition, if I wanted to compare this dataset to the same information for five years ago, this map would not be meaningful, since the intervals are specific to this data and the older data would use different intervals.</h4>
+    <a href="./naturalbreaks.png"> 
+                <img src="./naturalbreaks.png" alt="Tweaked Natural Breaks Map" width='500px'>
+                </a>
+
+    <!-- here you will link your data sources -->
+    <h2>Data used for this project</h2>
+    <a href="./ACSST5Y2019.S2412_data_with_overlays_2021-03-03T155945 copy 3.csv">Link to cleaned CSV dataset</a>
+    <p></p>
+    <a href="./ny_4326.geojson">Link to geoJSON</a>
+
+</body>
+</html>
