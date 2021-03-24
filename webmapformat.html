@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet Preview</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+  <style type="text/css">
+    body {
+       margin: 0;
+       padding: 0;
+    }
+    html, body, #map{
+       width: 100%;
+       height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+      var map = L.map('map').setView([34.718146,-76.663840], 16.0);
+
+      var courthouse = L.icon({
+        iconUrl: 'https://image.flaticon.com/icons/png/128/2204/2204056.png',
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+      });
+
+      var CustomPopupcourt = "HEYHEY <br/><img src= 'https://static5.depositphotos.com/1004999/458/i/950/depositphotos_4582193-stock-photo-beautiful-spring-park.jpg'width='250px'/>";
+
+      var cemetary = L.icon({
+        iconUrl: 'https://image.flaticon.com/icons/png/512/1830/1830427.png',
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+      })
+
+      var CustomPopupcem = "Old Burying Grounds <br/><img src= 'https://images.all-free-download.com/images/graphiclarge/old_cemetery_graveyard_headstones_223074.jpg'width='250px'/>";
+
+      var museum = L.icon({
+        iconUrl: 'https://image.flaticon.com/icons/png/512/1059/1059534.png',
+        iconSize: [50,50],
+        popupAnchor: [0,0]
+      })
+
+      var CustomPopupmus = "Maritime Museum: <br/><img src= 'https://upload.wikimedia.org/wikipedia/commons/a/ad/Portico%2C_National_Taiwan_Museum.jpg'width='250px'/>";
+
+      var marker1 = L.marker([34.719363,-76.662047],{icon:courthouse})
+          .bindPopup(CustomPopupcourt)
+          .openPopup();
+
+      var marker2 = L.marker([34.718146,-76.663840], {icon:cemetary})
+          .bindPopup(CustomPopupcem)
+          .openPopup();
+
+      var marker3 = L.marker([34.717758,-76.666308], {icon:museum})
+          .bindPopup(CustomPopupmus)
+          .openPopup();
+      
+      var OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+        
+      var Photo = L.tileLayer('./Tilesgeoref2/{z}/{x}/{y}.png', {
+        minZoom: 12,
+        maxZoom: 16,
+        tms: false,
+        attribution: 'USGS'
+      })
+
+      var Tiles = {
+        "Open Street Map": OSM,
+        "1972 Beaufort":Photo
+      }
+
+      var Vectors = {
+        "Courthouse" : marker1,
+        "Old Burying Grounds" : marker2,
+        "North Carolina Maritime Museum" : marker3
+      }
+      L.control.layers(Tiles,Vectors).addTo(map)
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Homework 7: Census data choropleth</h1>
+    <h2>Grace Parker</h2>
+    <h3>My map shows the median income of full-time, year-long workers that are age 16+ in New York by county. The chloropleth categorizes the median incomes by natural breaks. The darker purple shows a greater median income as defined in the legend. The data comes from the US Census, which provides additional data about the median income by gender and industry. I removed this data from the csv file to make the data lighter and faster to view. I cleaned the data in order to join it to the New York counties vector file. I used an attribute query to limit this vector file to only New York counties, since it orginally showed all counties in the U.S.</h3>
+
+    <!-- a png image of your map will be embedded using the lines below  -->
+    <a href="./emissionschoropleth.png"> 
+        <img src="./emissionschoropleth.png" alt="Carbon Dioxide Emissions" width='500px'>
+        </a>
+
+    <!-- here you will link your data sources -->
+    <h2>Data used for this project</h2>
+    <a href="./API_EN.ATM.CO2E.PC_DS2_en_csv_v2_2056655 copy.csv">Link to cleaned CSV dataset</a>
+    <p></p>
+    <a href="./emissionschoropleth.geojson">Link to geoJSON</a>
+    <a href="https://data.worldbank.org/indicator/EN.ATM.CO2E.PC?end=2016&start=2014&view=chart">Link to data source</a>
+
+</body>
+</html>
