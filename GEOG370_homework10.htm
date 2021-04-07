@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Homework 10: Geoprocessing</h1>
+    <h2>Grace Parker</h2>
+    <h3>This map uses geoprocessing to create original layers. I used buffers, dissolves, and intersections in this map. A five and three mile buffer were created around various features a potential resident may be interested in living close to. These include beach accesses, parks, and the hospital. I queried the NC county map to select only Carteret County and created its own layer. I dissolved the boundaries within the NC county map to get only an outline of the entire state. I used data from the Carteret County Open Data webpage to locate the features of interest. Then, I created a buffer for each feature and dissolved adjacent buffers of the same type so the overlap was not visible. Then I did an intersection to show the area that all of these requirements are met in. A map with and without the intersect is shown, since not every potential resident would care about each of these features.</h3>
+
+    <!-- a png image of your map will be embedded using the lines below  -->
+    <a href="./intersectionzonescarteret copy.png"> 
+        <img src="./intersectionzonescarteret copy.png" alt="Where do I want to live in Carteret County?" width='500px'>
+        </a>
+
+    <a href="./nonintersectingzonescarteret copy.png"> 
+            <img src="./nonintersectingzonescarteret copy.png" alt="Where do I want to live in Carteret County?" width='500px'>
+            </a>
+
+    <!-- here you will link your data sources -->
+    <h2>Data used for this project</h2>
+    <a href="./homework10layers/hospitalpoint.geojson">Link to Hospital Point</a>
+    <p></p>
+    <a href="./homework10layers/beachaccesspoints.geojson">Link to Beach Accesses Points</a>
+    <p></p>
+    <a href="./homework10layers/parkpolygons.geojson">Link to Park Polygons</a>
+    <p></p>
+    <a href="./homework10layers/optimalresarea.geojson">Link to Intersection Layer GeoJSON</a>
+    <p></p>
+    <a href="./homework10layers/hospitalradius.geojson">Link to Hospital Buffer</a>
+    <p></p>
+    <a href="./homework10layers/beachradius.geojson">Link to Beach Accesses Buffer</a>
+    <p></p>
+    <a href="./homework10layers/parkradius.geojson">Link to Park Buffer</a>
+    <p></p>
+    <a href="./homework10layers/carteret.geojson">Link to Carteret County Layer</a>
+    <p></p>
+    <a href="https://gisdata-cc-gis.opendata.arcgis.com/">Data Source</a>
+</body>
+</html>
